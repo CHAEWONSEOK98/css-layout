@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dce6d1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+// left-container
+
+.left-container {
+  background-color: black;
+  width: 430px;
+  height: 730px;
+  padding: 12px 5px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  margin-right: 10%;
+  transform: rotate(-20deg);
+}
+
+.left-container__main {
+  background-color: #cee1fe;
+  padding: 16px;
+  border-radius: 20px;
+
+  p {
+    margin-top: 25%;
+    font-size: 48px;
+    letter-spacing: 8px;
+    line-height: 64px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+}
+
+.left-container__main__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 32px;
+      height: 32px;
+      background-color: white;
+      border-radius: 100%;
+      margin-right: 8px;
+    }
+    span {
+      font-weight: 400;
+    }
+  }
+}
+
+.left-container__main__progress {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+#progress-text {
+  color: gray;
+}
+
+#progress-number {
+  margin-top: 12px;
+  font-size: 48px;
+}
+
+#divider {
+  margin-top: 12px;
+  background-color: white;
+  height: 16px;
+  border-radius: 12px;
+  border: 1px solid black;
+  width: 100%;
+}
+
+#divider-inner {
+  background-color: black;
+  width: 63%;
+  height: 15px;
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.left-container__main__progress-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__button {
+  background-color: white;
+  padding: 16px;
+  border: 2px solid black;
+  border-radius: 16px;
+  width: 100%;
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+.left-container__footer {
+  border-radius: 20px;
+  margin-top: 8px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 64px;
+}
+
+.left-container__footer-info {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: black;
+  }
+  span {
+    margin-left: 8px;
+  }
+}
+
+.left-container__footer__more {
+  background-color: black;
+  padding: 6px 0;
+  width: 120px;
+  text-align: center;
+  border-radius: 24px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 24px;
+
+  img {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: gray;
+  }
+}
+
+.left-container__footer__button {
+  background-color: yellow;
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-weight: bold;
+  transform: rotate(30deg);
+}
+
+// right-container
+.right-container {
+  margin-top: 5%;
+  background-color: black;
+  padding: 12px 16px;
+  width: 415px;
+  border-radius: 35px;
+  transform: rotate(-20deg);
+}
+
+.right-container__header {
+  margin-top: 12px;
+  text-align: center;
+
+  :nth-child(1) {
+    background-color: white;
+    color: black;
+  }
+
+  span {
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 24px;
+    color: white;
+  }
+}
+
+.right-container__main {
+  margin-top: 24px;
+  color: white;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 180px 180px;
+  grid-template-rows: 180px 180px;
+  grid-auto-rows: 180px;
+  justify-content: center;
+
+  grid-template-areas:
+    'one two'
+    'three three'
+    'four five'
+    'six six';
+}
+
+%border-radius {
+  border-radius: 24px;
+  color: red;
+  text-align: center;
+  line-height: 180px;
+}
+
+#one {
+  background-color: #282c32;
+  grid-area: one;
+  @extend %border-radius;
+}
+
+#two {
+  background-color: #f4f3f3;
+  grid-area: two;
+  @extend %border-radius;
+}
+
+#three {
+  background-color: #fafdc6;
+  grid-area: three;
+  @extend %border-radius;
+}
+
+#four {
+  background-color: #beaef9;
+  grid-area: four;
+  @extend %border-radius;
+}
+
+#five {
+  background-color: #fed4d4;
+  grid-area: five;
+  @extend %border-radius;
+}
+
+#six {
+  background-color: #d7fee2;
+  grid-area: six;
+  @extend %border-radius;
+}
